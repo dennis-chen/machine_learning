@@ -71,7 +71,7 @@ def train_log_reg(data):
     """trains on dataset with and returns a gradient descent solver object"""
     gd_solver = GDSolver(logistic_regression_error,logistic_regression_hyp,data,.001)
     init_theta = np.transpose(np.array([[0,0,0]]))
-    iterations = 100
+    iterations = 1000
     convergence_bound = 10e-9
     gd_solver.run_gd(init_theta,iterations,convergence_bound)
     return gd_solver
